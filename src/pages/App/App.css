@@ -1,0 +1,74 @@
+body { 
+  background: url('https://i.pinimg.com/originals/b5/ba/72/b5ba722e02461b6e3ef5d00e9af86b66.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* color: white; */
+  text-align: center;
+  background-size: cover;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1f9b86a6;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  width: auto;
+  border-bottom: 2px solid rgba(204, 204, 204, 0.603);
+}
+.App-header a {
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0 0 7px darkblue
+}
+.App-header a:hover {
+  color: #ccc;
+  text-decoration: none;
+  text-shadow: 0 0 7px black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  padding: 10px;
+  margin: 15px;
+}
