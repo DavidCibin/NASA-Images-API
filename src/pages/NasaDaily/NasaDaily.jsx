@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
+import { getDailyPics } from '../services/nasa-api'
 
 class NasaDaily extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div>
-        <h1>daily pics</h1>
-      </div>
-     );
+  state = {
+    dailyPics: {}
+  }
+  async componentDidMount() {
+    const dailyPics = await getDailyPics();
+    console.log(dailyPics, 'daily list??')
+    this.setState({ dailyPics })
+  }
+
+
+  render() {
+
+    return (
+      <>
+
+        
+
+        <div>
+          <h4>{this.state.dailyPics.date}</h4>
+          <img src={this.state.dailyPics.url}></img>
+
+        </div>
+      </>
+    );
   }
 }
- 
+
 export default NasaDaily;
