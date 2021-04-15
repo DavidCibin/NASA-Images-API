@@ -28,7 +28,7 @@ body {
   background-color: #1f9b86a6;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -37,15 +37,21 @@ body {
 }
 .App-header a {
   color: #fff;
-  font-size: 40px;
+  font-size: 20px;
   text-transform: uppercase;
   font-family: 'Press Start 2P', cursive;
-  text-shadow: 0 0 7px darkblue
+  text-shadow: 0 0 7px darkblue;
+  margin: 20px;
+  background-color: #0d5d5d;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px double #76a389;
 }
 .App-header a:hover {
   color: #ccc;
   text-decoration: none;
   text-shadow: 0 0 7px black;
+  background-color: #084444;
 }
 
 .App-link {
@@ -61,17 +67,7 @@ body {
   }
 }
 
-.d-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.card {
-  width: 300px;
-  padding: 10px;
-  margin: 15px;
-}
 
 h4 {
   color: #fff;

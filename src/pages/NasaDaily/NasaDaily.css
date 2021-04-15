@@ -1,0 +1,16 @@
+.daily {
+  display: inline-flex;
+}
+
+.card-daily {
+  max-width: 1200px;
+  margin: 50px;
+  background: white;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 6px;
+}
+
