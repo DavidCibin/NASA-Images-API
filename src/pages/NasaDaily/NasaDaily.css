@@ -1,5 +1,6 @@
 .daily {
   display: inline-flex;
+  margin: 25px;
 }
 
 .card-daily {
@@ -9,8 +10,8 @@
   padding: 20px;
   margin: 0 auto;
   margin-top: 50px;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 25px;
+  margin-left: 25px;
   border-radius: 6px;
 }
 
