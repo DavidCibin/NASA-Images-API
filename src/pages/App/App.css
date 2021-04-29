@@ -82,6 +82,10 @@ body {
   color: #61dafb;
 }
 
+.gif {
+  margin-top: -50px;
+}
+
 
 @keyframes App-logo-spin {
   from {

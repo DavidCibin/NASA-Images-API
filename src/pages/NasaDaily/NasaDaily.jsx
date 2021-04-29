@@ -37,30 +37,36 @@ class NasaDaily extends Component {
           </Form>
         </div> */}
 
-        <div className="daily">
-          <div className="card-daily">
-            <h2>Picture of the day - {this.state.dailyPics.date}</h2>
-            <a href={this.state.dailyPics.hdurl} target="_blank" rel="noreferrer">
-              <img src={this.state.dailyPics.url} className="card-img-top" alt="nasa-pic-of-the-day"></img>
-            </a>
-            <div className="card-body">
-              <h5 className="card-title">{this.state.dailyPics.title} - {this.state.dailyPics.date}</h5>
-              <p className="card-text">{this.state.dailyPics.explanation}</p>
-              <p className="card-text"><small className="text-muted">Copyright: {this.state.dailyPics.copyright}</small></p>
+        {this.state.dailyPics.date ?
+          <div className="daily">
+            <div className="card-daily">
+              <h2>Picture of the day - {this.state.dailyPics.date}</h2>
+              <a href={this.state.dailyPics.hdurl} target="_blank" rel="noreferrer">
+                <img src={this.state.dailyPics.url} className="card-img-top" alt="nasa-pic-of-the-day"></img>
+              </a>
+              <div className="card-body">
+                <h5 className="card-title">{this.state.dailyPics.title} - {this.state.dailyPics.date}</h5>
+                <p className="card-text">{this.state.dailyPics.explanation}</p>
+                <p className="card-text"><small className="text-muted">Copyright: {this.state.dailyPics.copyright}</small></p>
+              </div>
+            </div>
+            <div className="card-daily">
+              <h2>Random date - {this.state.randomPic.date}</h2>
+              <a href={this.state.randomPic.hdurl} target="_blank" rel="noreferrer">
+                <img src={this.state.randomPic.url} className="card-img-top" alt="nasa-random-day-pic"></img>
+              </a>
+              <div className="card-body">
+                <h5 className="card-title">{this.state.randomPic.title} - {this.state.randomPic.date}</h5>
+                <p className="card-text">{this.state.randomPic.explanation}</p>
+                <p className="card-text"><small className="text-muted">Copyright: {this.state.randomPic.copyright}</small></p>
+              </div>
             </div>
           </div>
-          <div className="card-daily">
-            <h2>Random date - {this.state.randomPic.date}</h2>
-            <a href={this.state.randomPic.hdurl} target="_blank" rel="noreferrer">
-              <img src={this.state.randomPic.url} className="card-img-top" alt="nasa-random-day-pic"></img>
-            </a>
-            <div className="card-body">
-              <h5 className="card-title">{this.state.randomPic.title} - {this.state.randomPic.date}</h5>
-              <p className="card-text">{this.state.randomPic.explanation}</p>
-              <p className="card-text"><small className="text-muted">Copyright: {this.state.randomPic.copyright}</small></p>
-            </div>
+          :
+          <div>
+            <img src="https://worldwind.arc.nasa.gov/agrosphere/images/nasa.gif" alt="NASA GIF"/>
           </div>
-        </div>
+        }
       </>
     );
   }
