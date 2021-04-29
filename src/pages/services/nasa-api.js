@@ -1,24 +1,18 @@
-import NasaDaily from '../../pages/NasaDaily/NasaDaily'
-
 export function getNasaPics() {
-  // return fetch('/api/nasa')
   return fetch('/api/nasa-mars')
     .then(res => res.json())
 }
 
 
 export function getDailyPics() {
-  // return fetch('/api/nasa')
   return fetch('/api/nasa-daily')
     .then(res => res.json())
 }
 
 export function getRandomPic() {
-  // return fetch('/api/nasa')
   return fetch('/api/')
     .then(res => res.json())
 }
-
 
 // const start = new Date(1995, 6, 16)
 // const end = new Date()

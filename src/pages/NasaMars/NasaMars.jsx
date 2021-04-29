@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './NasaMars.css'
 import { getNasaPics } from '../services/nasa-api'
-// import { Link } from 'react-router-dom'
 
 
 class NasaMars extends Component {
@@ -10,20 +9,17 @@ class NasaMars extends Component {
   }
   async componentDidMount() {
     const nasaPics = await getNasaPics();
-    console.log(nasaPics, 'listing??')
     this.setState({ nasaPics: nasaPics.photos })
   }
-
 
 render() {
   return (
     <>
-
       <div className="d-flex flex-wrap">
         {this.state.nasaPics.map((mars, idx) => (
 
           <div className="card" key={idx}>
-            <img className="card-img-top" src={mars.img_src} alt="Card image cap"></img>
+            <img className="card-img-top" src={mars.img_src} alt="NASA MARS ROVER PICS"></img>
             <div className="card-body">
               <h5 className="card-title">{mars.camera.full_name}</h5>
               <h6 className="card-title">Photo taken on: {mars.earth_date}</h6>

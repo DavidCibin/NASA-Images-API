@@ -12,16 +12,14 @@ class NasaDaily extends Component {
   async componentDidMount() {
     const dailyPics = await getDailyPics();
     const randomPic = await getRandomPic();
-    console.log(dailyPics, 'daily list??')
-    console.log(randomPic, 'randomPic??')
     this.setState({ dailyPics })
     this.setState({ randomPic })
   }
 
-  handleChange = (e, { date, value }) => {
-    console.log(date, value)
-    this.setState({ [date]: value })
-  }
+  // handleChange = (e, { date, value }) => {
+  //   console.log(date, value)
+  //   this.setState({ [date]: value })
+  // }
 
   render() {
 
@@ -40,26 +38,26 @@ class NasaDaily extends Component {
         </div> */}
 
         <div className="daily">
-          <div class="card-daily">
+          <div className="card-daily">
             <h2>Picture of the day - {this.state.dailyPics.date}</h2>
-            <a href={this.state.dailyPics.hdurl} target="_blank">
-              <img src={this.state.dailyPics.url} class="card-img-top" alt="nasa-pic-of-the-day"></img>
+            <a href={this.state.dailyPics.hdurl} target="_blank" rel="noreferrer">
+              <img src={this.state.dailyPics.url} className="card-img-top" alt="nasa-pic-of-the-day"></img>
             </a>
-            <div class="card-body">
-              <h5 class="card-title">{this.state.dailyPics.title} - {this.state.dailyPics.date}</h5>
-              <p class="card-text">{this.state.dailyPics.explanation}</p>
-              <p class="card-text"><small class="text-muted">Copyright: {this.state.dailyPics.copyright}</small></p>
+            <div className="card-body">
+              <h5 className="card-title">{this.state.dailyPics.title} - {this.state.dailyPics.date}</h5>
+              <p className="card-text">{this.state.dailyPics.explanation}</p>
+              <p className="card-text"><small className="text-muted">Copyright: {this.state.dailyPics.copyright}</small></p>
             </div>
           </div>
-          <div class="card-daily">
+          <div className="card-daily">
             <h2>Random date - {this.state.randomPic.date}</h2>
-            <a href={this.state.randomPic.hdurl} target="_blank">
-              <img src={this.state.randomPic.url} class="card-img-top" alt="nasa-random-day-pic"></img>
+            <a href={this.state.randomPic.hdurl} target="_blank" rel="noreferrer">
+              <img src={this.state.randomPic.url} className="card-img-top" alt="nasa-random-day-pic"></img>
             </a>
-            <div class="card-body">
-              <h5 class="card-title">{this.state.randomPic.title} - {this.state.randomPic.date}</h5>
-              <p class="card-text">{this.state.randomPic.explanation}</p>
-              <p class="card-text"><small class="text-muted">Copyright: {this.state.randomPic.copyright}</small></p>
+            <div className="card-body">
+              <h5 className="card-title">{this.state.randomPic.title} - {this.state.randomPic.date}</h5>
+              <p className="card-text">{this.state.randomPic.explanation}</p>
+              <p className="card-text"><small className="text-muted">Copyright: {this.state.randomPic.copyright}</small></p>
             </div>
           </div>
         </div>
