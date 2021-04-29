@@ -63,8 +63,6 @@ class NasaDaily extends Component {
             </div>
           </div>
         </div>
-
-
       </>
     );
   }

@@ -8,7 +8,6 @@ body {
   background-size: cover;
 }
 
-
 .App {
   text-align: center;
 }
@@ -17,6 +16,7 @@ body {
   height: 40vmin;
   pointer-events: none;
   margin-left: 40px;
+  float: left;
   animation: rotate 10s cubic-bezier(0.85, 0, 0.2, 0.99) infinite;
 }
 
@@ -38,7 +38,28 @@ body {
   border-bottom: 2px solid #7061d3;
   grid-template-columns: repeat(3, 1fr);
 }
-.App-header a {
+
+@media (max-width: 500px) {
+  .App-header {
+    /* margin: 0px; */
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  a.nav-a {
+    margin: 0px;
+    font-size: 18px;
+  }
+  .App-logo {
+    float: none;
+    margin-left: 0px;
+  }
+  .daily {
+    display: initial !important;
+    margin: 25px;
+}
+}
+
+.nav-a {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
@@ -50,7 +71,7 @@ body {
   border-radius: 6px;
   border: 2px double #7061d3;
 }
-.App-header a:hover {
+.nav-a:hover {
   color: #ccc;
   text-decoration: none;
   text-shadow: 0 0 7px black;

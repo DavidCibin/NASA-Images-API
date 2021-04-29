@@ -1,16 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
-  return(
+  return (
     <header className="App-header">
-      <img
-        src='https://api.nasa.gov/assets/img/favicons/favicon-192.png'
-        style={{ width: "100px", height: "100px" }}
-        className="App-logo"
-        alt="logo"
-      />
+      <a href="/">
+        <img
+          href="/"
+          src='https://api.nasa.gov/assets/img/favicons/favicon-192.png'
+          style={{ width: "100px", height: "100px" }}
+          className="App-logo"
+          alt="logo"
+        />
+      </a>
       {props.navItems.map((navItem, idx) =>
-        <a key={idx} href={navItem.url}>{navItem.name}</a>
+        <a className="nav-a" key={idx} href={navItem.url}>{navItem.name}</a>
       )}
     </header>
   )

@@ -20,9 +20,9 @@ render() {
     <>
 
       <div className="d-flex flex-wrap">
-        {this.state.nasaPics.map((mars) => (
+        {this.state.nasaPics.map((mars, idx) => (
 
-          <div className="card" key={mars.idx}>
+          <div className="card" key={idx}>
             <img className="card-img-top" src={mars.img_src} alt="Card image cap"></img>
             <div className="card-body">
               <h5 className="card-title">{mars.camera.full_name}</h5>
