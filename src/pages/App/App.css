@@ -56,7 +56,7 @@ body {
   .daily {
     display: initial !important;
     margin: 25px;
-}
+  }
 }
 
 .nav-a {
@@ -85,7 +85,6 @@ body {
 .gif {
   margin-top: -50px;
 }
-
 
 @keyframes App-logo-spin {
   from {

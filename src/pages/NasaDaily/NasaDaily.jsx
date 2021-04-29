@@ -27,7 +27,6 @@ class NasaDaily extends Component {
       <>
 
         {/* {this.state.dailyPics.map((daily) => ())} */}
-
         {/* <div>
           <Form onSubmit={this.sendDataSomewhere}>
             <Form.Field>
