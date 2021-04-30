@@ -19,6 +19,10 @@ body {
   float: left;
   animation: rotate 10s cubic-bezier(0.85, 0, 0.2, 0.99) infinite;
 }
+.git-logo {
+  float: right;
+  margin-right: 40px;
+}
 
 @keyframes rotate {
   100% {
@@ -36,12 +40,12 @@ body {
   font-size: calc(10px + 2vmin);
   width: auto;
   border-bottom: 2px solid #7061d3;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 500px) {
   .App-header {
-    /* margin: 0px; */
+    background-color: #22196ec0;
     grid-template-columns: none;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -52,6 +56,11 @@ body {
   .App-logo {
     float: none;
     margin-left: 0px;
+  }
+  .git-logo {
+    float: none;
+    margin-right: 0px;
+    margin-bottom: 10px;
   }
   .daily {
     display: initial !important;
@@ -93,5 +102,9 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-daily {
+  max-width: 650px !important;
 }
 

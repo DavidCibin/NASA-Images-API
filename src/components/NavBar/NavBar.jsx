@@ -15,6 +15,14 @@ const NavBar = (props) => {
       {props.navItems.map((navItem, idx) =>
         <a className="nav-a" key={idx} href={navItem.url}>{navItem.name}</a>
       )}
+      <a href="https://github.com/DavidCibin/nasa-pics-and-mars-rover">
+        <img
+          src='https://i.ibb.co/BgGmrgg/Git-Hub-Mark-Light-64px.png'
+          style={{ width: "50px", height: "50px" }}
+          className="git-logo"
+          alt="logo"
+        />
+      </a>
     </header>
   )
 }

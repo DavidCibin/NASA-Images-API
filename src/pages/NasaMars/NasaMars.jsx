@@ -15,7 +15,7 @@ class NasaMars extends Component {
   render() {
     return (
       <>
-        this.state.nasaPics.rover.name ?
+        {/* this.state.nasaPics.rover.name ? */}
           <div className="d-flex flex-wrap">
             {this.state.nasaPics.map((mars, idx) => (
 
@@ -32,7 +32,7 @@ class NasaMars extends Component {
               </div>
             ))}
           </div>
-          :
+          {/* : */}
           <div>
             <img className="gif" src="https://worldwind.arc.nasa.gov/agrosphere/images/nasa.gif" alt="NASA GIF" />
           </div>

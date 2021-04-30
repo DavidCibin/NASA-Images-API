@@ -3,7 +3,6 @@ export function getNasaPics() {
     .then(res => res.json())
 }
 
-
 export function getDailyPics() {
   return fetch('/api/nasa-daily')
     .then(res => res.json())
