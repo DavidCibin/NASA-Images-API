@@ -10,6 +10,7 @@ In this application I used NASA APIs in two different pages. One is to display t
 
 The other page I used Mars Rover Photo API, this API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars.
 
+The app can be launched [here](https://nasapics-api.herokuapp.com/) and was deployed using Heroku.
 
 ![Print1](public/images/print1.png)
 
