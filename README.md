@@ -1,4 +1,4 @@
-# NASA Astronomy Picture of the Day & Mars Rover Pictures
+## NASA Astronomy Picture of the Day & Mars Rover Pictures
 
 A React frontend connected to a Node backend is a rock-solid combination for any application you want to build.
 
