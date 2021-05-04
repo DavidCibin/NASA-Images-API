@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './NasaDaily.css'
-import { getDailyPics } from '../services/nasa-api'
-import { getRandomPic } from '../services/nasa-api'
+import { getDailyPics, getRandomPic, getMyDate } from '../services/nasa-api'
 
 class NasaDaily extends Component {
   state = {
     dailyPics: [],
     randomPic: [],
-    date: '2010-09-06'
+    date: 'DD-MM-YYYY',
+    today: new Date().toISOString().slice(0, 10),
+    datePic: {},
   }
   async componentDidMount() {
     const dailyPics = await getDailyPics();
@@ -15,73 +16,137 @@ class NasaDaily extends Component {
     this.setState({ dailyPics })
     this.setState({ randomPic })
   }
-// this.state.randomPic.date
-  // handleReview = (e) => {
-	// 	console.log(e.target.value, "\n^^e.target.value reviewww")
-	// 	setReview(e.target.value)
-	// }
-  handleChange = (event) => {
-    this.setState({ date: event.target.value })
+  
+  handleChange = async (event) => {
+    const datePic = await getMyDate(event.target.value);
+    this.setState({ datePic })
   }
-  // event => this.setState({date: event.target.value}
 
   render() {
 
     return (
       <>
+        {this.state.dailyPics.date ?
+          <div className="daily">
+            <div className="card-daily">
+              <h4>Picture of the day - {this.state.dailyPics.date}</h4>
 
-        {/* {this.state.dailyPics.map((daily) => ())} */}
-        {/* <div>
-          <form onSubmit={this.sendDataSomewhere}>
-            <input name="date" value={this.state.date} onChange={this.handleChange} />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div className="input-field col s12"> */}
-          {/* <form action="/nasa-daily" method="GET">
-            
-            <input
-              name="date"
-              id="date"
-              min="1995-06-16"
-              type="date"
-              className="active"
-              value={this.state.date}
-              onChange={this.handleChange}
-            >
-            </input>
-          </form> */}
-
-          {this.state.dailyPics.date ?
-            <div className="daily">
-              <div className="card-daily">
-                <h2>Picture of the day - {this.state.dailyPics.date}</h2>
+              {this.state.dailyPics.media_type === 'video' ?
+                <iframe
+                  className="videos"
+                  frameborder="2"
+                  allowfullscreen="allowfullscreen"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  oallowfullscreen
+                  msallowfullscreen
+                  src={this.state.dailyPics.url}
+                >
+                </iframe>
+                :
                 <a href={this.state.dailyPics.hdurl} target="_blank" rel="noreferrer">
                   <img src={this.state.dailyPics.url} className="card-img-top" alt="nasa-pic-of-the-day"></img>
                 </a>
-                <div className="card-body">
-                  <h5 className="card-title">{this.state.dailyPics.title} - {this.state.dailyPics.date}</h5>
-                  <p className="card-text">{this.state.dailyPics.explanation}</p>
-                  <p className="card-text"><small className="text-muted">Copyright: {this.state.dailyPics.copyright}</small></p>
-                </div>
-              </div>
-              <div className="card-daily">
-                <h2>Random date - {this.state.randomPic.date}</h2>
-                <a href={this.state.randomPic.hdurl} target="_blank" rel="noreferrer">
-                  <img src={this.state.randomPic.url} className="card-img-top" alt="nasa-random-day-pic"></img>
-                </a>
-                <div className="card-body">
-                  <h5 className="card-title">{this.state.randomPic.title} - {this.state.randomPic.date}</h5>
-                  <p className="card-text">{this.state.randomPic.explanation}</p>
-                  <p className="card-text"><small className="text-muted">Copyright: {this.state.randomPic.copyright}</small></p>
-                </div>
+              }
+              <div className="card-body">
+                <h5 className="card-title">{this.state.dailyPics.title} - {this.state.dailyPics.date}</h5>
+                <p className="card-text">{this.state.dailyPics.explanation}</p>
+                <p className="card-text"><small className="text-muted">Copyright: {this.state.dailyPics.copyright}</small></p>
               </div>
             </div>
-            :
-            <div>
-              <img src="https://worldwind.arc.nasa.gov/agrosphere/images/nasa.gif" alt="NASA GIF" />
+            <div className="card-daily">
+              {!this.state.datePic.url ?
+                <>
+                  <div className="datepic">
+                    <form onSubmit>
+                      <button className="">Random Date</button>
+                    </form>
+                    <h4>or</h4>
+                    <input
+                      name="date"
+                      id="date"
+                      min="1995-06-20"
+                      max={this.state.dailyPics.date}
+                      type="date"
+                      className="active"
+                      value={this.state.date}
+                      onChange={this.handleChange}
+                    >
+                    </input>
+                  </div>
+                  {this.state.randomPic.media_type === 'video' ?
+                    <iframe
+                      className="videos"
+                      frameborder="2"
+                      allowfullscreen="allowfullscreen"
+                      webkitallowfullscreen
+                      mozallowfullscreen
+                      oallowfullscreen
+                      msallowfullscreen
+                      src={this.state.randomPic.url}
+                    >
+                    </iframe>
+                    :
+                    <a href={this.state.randomPic.hdurl} target="_blank" rel="noreferrer">
+                      <img src={this.state.randomPic.url} className="card-img-top" alt="nasa-random-day-pic"></img>
+                    </a>
+                  }
+                  <div className="card-body">
+                    <h5 className="card-title">{this.state.randomPic.title} - {this.state.randomPic.date}</h5>
+                    <p className="card-text">{this.state.randomPic.explanation}</p>
+                    <p className="card-text"><small className="text-muted">Copyright: {this.state.randomPic.copyright}</small></p>
+                  </div>
+                </>
+                :
+                <>
+                  <div className="datepic">
+                    <form onSubmit>
+                      <button className="">Random Date</button>
+                    </form>
+                    <h4>or</h4>
+                    <input
+                      name="date"
+                      id="date"
+                      min="1995-06-20"
+                      max={this.state.dailyPics.date}
+                      type="date"
+                      className="active"
+                      value={this.state.datePic.date}
+                      onChange={this.handleChange}
+                    >
+                    </input>
+                  </div>
+                  {this.state.datePic.media_type === 'video' ?
+                    <iframe
+                      className="videos"
+                      frameborder="2"
+                      allowfullscreen="allowfullscreen"
+                      webkitallowfullscreen
+                      mozallowfullscreen
+                      oallowfullscreen
+                      msallowfullscreen
+                      src={this.state.datePic.url}
+                    >
+                    </iframe>
+                    :
+                    <a href={this.state.datePic.hdurl} target="_blank" rel="noreferrer">
+                      <img src={this.state.datePic.url} className="card-img-top" alt="nasa-random-day-pic"></img>
+                    </a>
+                  }
+                  <div className="card-body">
+                    <h5 className="card-title">{this.state.datePic.title} - {this.state.datePic.date}</h5>
+                    <p className="card-text">{this.state.datePic.explanation}</p>
+                    <p className="card-text"><small className="text-muted">Copyright: {this.state.datePic.copyright}</small></p>
+                  </div>
+                </>
+              }
             </div>
-          }
+          </div>
+          :
+          <div>
+            <img className="gif" src="https://worldwind.arc.nasa.gov/agrosphere/images/nasa.gif" alt="NASA GIF" />
+          </div>
+        }
       </>
     );
   }

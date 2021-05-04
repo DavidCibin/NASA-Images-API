@@ -7,10 +7,14 @@ body {
   text-align: center;
   background-size: cover;
 }
+#root {
+  padding-bottom:60px;
+}
 
 .App {
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -40,10 +44,10 @@ body {
   font-size: calc(10px + 2vmin);
   width: auto;
   border-bottom: 2px solid #7061d3;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 350px 350px 1fr;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .App-header {
     background-color: #22196ec0;
     grid-template-columns: none;
@@ -51,7 +55,7 @@ body {
   }
   a.nav-a {
     margin: 0px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .App-logo {
     float: none;
@@ -62,15 +66,23 @@ body {
     margin-right: 0px;
     margin-bottom: 10px;
   }
+}
+@media (max-width: 500px) {  
   .daily {
     display: initial !important;
     margin: 25px;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 700px) {  
+  .datepic {
+    display: inherit !important;
   }
 }
 
 .nav-a {
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   font-family: 'Press Start 2P', cursive;
   text-shadow: 0 0 7px darkblue;
@@ -79,6 +91,7 @@ body {
   padding: 10px;
   border-radius: 6px;
   border: 2px double #7061d3;
+  max-width: 315px;
 }
 .nav-a:hover {
   color: #ccc;
@@ -92,7 +105,7 @@ body {
 }
 
 .gif {
-  margin-top: -50px;
+  margin-top: -30px;
 }
 
 @keyframes App-logo-spin {
@@ -107,4 +120,69 @@ body {
 .card-daily {
   max-width: 650px !important;
 }
+
+.d-flex {
+  margin-top: 30px;
+}
+
+.datepic {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+.datepic button{
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #5e5e64;
+  display: inline;
+  min-width: 138px;
+}
+.datepic input{
+  width: 150px;
+}
+
+.videos{
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+@media (min-width: 500px) {
+  .videos{
+    width: 100%;
+    height: 400;
+  }
+}
+@media (min-width: 900px) {
+  .videos{
+    width: 100%;
+    height: 250px;
+  }
+}
+@media (min-width: 1100px) {
+  .videos{
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 1300px) {
+  .videos{
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.footer{
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000000cf;
+  margin-bottom: -10px;
+  padding-top: 5px;
+}
+
 

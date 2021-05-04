@@ -3,25 +3,22 @@ module.exports = {
   nasaMars,
   nasaDaily,
   nasaRandom,
-  update    
+  myDate,
+  // myDatePost        
 }
 
-function update(req, res) {
-  console.log(req.params)
-    update(req.params, req.body)
-    res.redirect('/nasa-daily')
+
+// GET
+async function myDate(req, res) {
+  axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY_NASA}&date=${req.params.date}`)
+    .then(response => res.json(response.data))
 }
 
-// router.post("/customDate", async (req, res) => {
-//   const customDate = req.body.date
-//   await axios({
-//     method: "GET",
-//     url: `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY_NASA}&date=${customDate}`,
-//     withCredentials: false
-//   }).then((response) => {
-//     res.send(response.image)
-//   })
-// })
+// POST
+// async function myDatePost(req, res) {
+//   axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY_NASA}&date=${req.body.date}`)
+//     .then(response => res.json(response.data))
+// }
 
 
 const start = new Date(1995, 6, 16)
@@ -29,7 +26,6 @@ const end = new Date()
 function randomDate(start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
 }
-
 async function nasaRandom(req, res) {
   // console.log(res)
   const randDate = randomDate(start, end).toISOString().slice(0, 10)
