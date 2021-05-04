@@ -11,8 +11,8 @@ In this application I used NASA APIs in two different pages. One is to display t
 The other page I used Mars Rover Photo API, this API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars.
 
 
-[Print1](/images/print1)
+[Print1](public/images/print1)
 
-[Print2](/images/print2)
+[Print2](public/images/print2)
 
-[Print3](/images/print3)
+[Print3](public/images/print3)
