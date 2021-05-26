@@ -31,7 +31,7 @@ class NasaDaily extends Component {
             <div className="card-daily">
               <h4>Picture of the day - {this.state.dailyPics.date}</h4>
 
-              {this.state.dailyPics.media_type === 'video' ?
+              {(this.state.dailyPics.media_type === 'video' || this.state.dailyPics.media_type === 'other') ?
                 <iframe
                   className="videos"
                   frameborder="2"
@@ -74,7 +74,7 @@ class NasaDaily extends Component {
                     >
                     </input>
                   </div>
-                  {this.state.randomPic.media_type === 'video' ?
+                  {(this.state.randomPic.media_type === 'video' || this.state.randomPic.media_type === 'other') ?
                     <iframe
                       className="videos"
                       frameborder="2"
@@ -116,7 +116,7 @@ class NasaDaily extends Component {
                     >
                     </input>
                   </div>
-                  {this.state.datePic.media_type === 'video' ?
+                  {(this.state.datePic.media_type === 'video' || this.state.datePic.media_type === 'other') ?
                     <iframe
                       className="videos"
                       frameborder="2"
