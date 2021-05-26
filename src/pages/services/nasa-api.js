@@ -13,13 +13,13 @@ export function getRandomPic() {
     .then(res => res.json())
 }
 
-// GET
+// using GET
 export function getMyDate(date) {
   return fetch(`/api/nasa-mydate/${date}`)
     .then(res => res.json())
 }
 
-// POST
+// using POST
 // export function getMyDate(date) {
 //   return fetch(`/api/nasa-mydate/`, {
 //     method: 'POST',

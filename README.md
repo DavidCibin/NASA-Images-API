@@ -1,6 +1,6 @@
 ## NASA Astronomy Picture of the Day & Mars Rover Pictures
 
-A React frontend connected to a Node backend is a rock-solid combination for any application you want to build.
+A React front-end connected to a Node back-end is a rock-solid combination for any application you want to build.
 
 APIs are what we can use to supercharge our React applications with data. There are certain operations that can’t be done on the client-side, so these operations are implemented on the server-side. We can then use the APIs to consume the data on the client-side.
 
