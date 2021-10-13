@@ -33,6 +33,7 @@ class NasaDaily extends Component {
 
               {(this.state.dailyPics.media_type === 'video' || this.state.dailyPics.media_type === 'other') ?
                 <iframe
+                  title="video"
                   className="videos"
                   frameborder="2"
                   allowfullscreen="allowfullscreen"
@@ -76,6 +77,7 @@ class NasaDaily extends Component {
                   </div>
                   {(this.state.randomPic.media_type === 'video' || this.state.randomPic.media_type === 'other') ?
                     <iframe
+                      title="video"
                       className="videos"
                       frameborder="2"
                       allowfullscreen="allowfullscreen"
@@ -118,6 +120,7 @@ class NasaDaily extends Component {
                   </div>
                   {(this.state.datePic.media_type === 'video' || this.state.datePic.media_type === 'other') ?
                     <iframe
+                      title="video"
                       className="videos"
                       frameborder="2"
                       allowfullscreen="allowfullscreen"
