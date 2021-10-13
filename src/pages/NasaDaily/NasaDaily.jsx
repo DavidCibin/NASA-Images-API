@@ -33,7 +33,11 @@ class NasaDaily extends Component {
 
               {(this.state.dailyPics.media_type === 'video' || this.state.dailyPics.media_type === 'other') ?
                 <iframe
+<<<<<<< HEAD
                   title="video"
+=======
+                  title="videos"
+>>>>>>> 64573b869a0da315cb0eeaf73bc23cbd35ebfc0e
                   className="videos"
                   frameborder="2"
                   allowfullscreen="allowfullscreen"
@@ -77,7 +81,11 @@ class NasaDaily extends Component {
                   </div>
                   {(this.state.randomPic.media_type === 'video' || this.state.randomPic.media_type === 'other') ?
                     <iframe
+<<<<<<< HEAD
                       title="video"
+=======
+                      title="videos"
+>>>>>>> 64573b869a0da315cb0eeaf73bc23cbd35ebfc0e
                       className="videos"
                       frameborder="2"
                       allowfullscreen="allowfullscreen"
@@ -120,7 +128,11 @@ class NasaDaily extends Component {
                   </div>
                   {(this.state.datePic.media_type === 'video' || this.state.datePic.media_type === 'other') ?
                     <iframe
+<<<<<<< HEAD
                       title="video"
+=======
+                      title="videos"
+>>>>>>> 64573b869a0da315cb0eeaf73bc23cbd35ebfc0e
                       className="videos"
                       frameborder="2"
                       allowfullscreen="allowfullscreen"

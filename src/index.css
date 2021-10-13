@@ -1,13 +1,10 @@
+@import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization);
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Nasalization"; src: url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot");
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Nasalization"; src: url("//db.onlinewebfonts.com/t/f88cd11de6d9aa48ddc14cf6181b309c.eot");
 }
