@@ -4,6 +4,7 @@ import './index.css';
 import App from './pages/App/App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import './fonts/Nasalization/nasalization-rg.otf'
 
 ReactDOM.render(
   <Router>
