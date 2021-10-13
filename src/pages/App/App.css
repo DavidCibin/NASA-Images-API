@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/f88cd11de6d9aa48ddc14cf6181b309c?family=Nasalization);
+
 body { 
   background: url('https://i.pinimg.com/originals/b5/ba/72/b5ba722e02461b6e3ef5d00e9af86b66.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -84,7 +86,7 @@ body {
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Nasalization";
   text-shadow: 0 0 7px darkblue;
   margin: 20px;
   background-color: #3523a5;
