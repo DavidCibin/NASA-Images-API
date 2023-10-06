@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const logger = require('morgan');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 require('dotenv').config();
 
