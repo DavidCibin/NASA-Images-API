@@ -3,10 +3,30 @@ export function getNasaPics() {
     .then(res => res.json())
 }
 
+// export function getDailyPics() {
+//   return fetch('/api/nasa-daily')
+//     .then(res => res.json())
+// }
+
 export function getDailyPics() {
   return fetch('/api/nasa-daily')
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return res.json();
+    })
+    .then(jsonData => {
+      console.log('JSON Data:', jsonData); // Log the JSON object
+      return jsonData; // Return the JSON data for further processing if needed
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      throw error; // Rethrow the error for further handling
+    });
 }
+
+
 
 export function getRandomPic() {
   return fetch('/api/')

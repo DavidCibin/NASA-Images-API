@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://nasa-images-api.onrender.com"
+  "proxy": "http://localhost:3001"
 }
