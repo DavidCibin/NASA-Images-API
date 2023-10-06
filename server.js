@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 });
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // Replace this with your frontend domain
+    origin: 'https://nasa-images-api.onrender.com', // Replace this with your frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 };
