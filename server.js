@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const logger = require('morgan');
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 require('dotenv').config();
 
@@ -21,3 +21,9 @@ app.get('/*', function(req, res) {
 app.listen(port, ()=> {
     console.log(`Express is listening on port ${port}.`)
 });
+
+app.use((req, res, next) => {
+    console.log(req.headers, "HERE HERE HERE HERE HERE HERE ");
+    next();
+  });
+  
