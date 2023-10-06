@@ -27,4 +27,3 @@ export function getMyDate(date) {
 //   })
 //     .then(res => res.json())
 // }
-
