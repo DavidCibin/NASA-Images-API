@@ -12,6 +12,7 @@ export function getDailyPics() {
   return fetch('/api/nasa-daily')
     .then(res => {
       if (!res.ok) {
+        console.log(res, " res res");
         throw new Error(res, 'Network response was not ok');
       }
       return res.json();
