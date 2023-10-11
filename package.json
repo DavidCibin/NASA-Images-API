@@ -42,13 +42,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://nasa-images-api-1hp9.onrender.com",
+  "proxy": "http://localhost:3001",
   "devServer": {
-    "disableHostCheck": true,
-    "allowedHosts": [
-      "https://nasa-images-api-1hp9.onrender.com",
-      "https://nasa-images-api.onrender.com",
-      "localhost"
-    ]
+    "disableHostCheck": true
   }
 }
