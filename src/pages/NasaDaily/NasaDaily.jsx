@@ -11,11 +11,17 @@ class NasaDaily extends Component {
     datePic: {},
   }
   async componentDidMount() {
-    const dailyPics = await getDailyPics();
-    const randomPic = await getRandomPic();
-    this.setState({ dailyPics })
-    this.setState({ randomPic })
+    try {
+      const dailyPics = await getDailyPics();
+      const randomPic = await getRandomPic();
+      this.setState({ dailyPics, randomPic });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      alert(error)
+      // Handle the error in your UI, e.g., show an error message to the user
+    }
   }
+  
   
   handleChange = async (event) => {
     const datePic = await getMyDate(event.target.value);

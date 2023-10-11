@@ -9,11 +9,21 @@ module.exports = {
 
 
 // using GET
+// async function myDate(req, res) {
+//   console.log(req)
+//   axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY_NASA}&date=${req.params.date}`)
+//     .then(response => res.json(response.data))
+// }
+
 async function myDate(req, res) {
-  console.log(req)
-  axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY_NASA}&date=${req.params.date}`)
-    .then(response => res.json(response.data))
+  try {
+    const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY_NASA}&date=${req.params.date}`);
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
+
 
 // using POST
 // async function myDatePost(req, res) {
