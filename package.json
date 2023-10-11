@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://nasa-images-api.onrender.com",
+  "proxy": "http://10.207.6.167:10000",
   "devServer": {
     "disableHostCheck": true
   }
