@@ -44,6 +44,7 @@
   },
   "proxy": "https://nasa-images-api-1hp9.onrender.com",
   "devServer": {
+    "disableHostCheck": true,
     "allowedHosts": [
       "https://nasa-images-api-1hp9.onrender.com",
       "https://nasa-images-api.onrender.com",
