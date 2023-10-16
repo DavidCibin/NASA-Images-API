@@ -34,7 +34,7 @@ class NasaMars extends Component {
           </div>
           :
           <div>
-            <img className="gif" src="https://worldwind.arc.nasa.gov/agrosphere/images/nasa.gif" alt="NASA GIF" />
+            <img className="gif" src="/images/loading.gif" alt="NASA GIF" />
           </div>
         }
       </>
