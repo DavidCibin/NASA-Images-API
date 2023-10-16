@@ -16,10 +16,8 @@ class NasaDaily extends Component {
       const randomPic = await getRandomPic();
       this.setState({ dailyPics, randomPic });
     } catch (error) {
-      console.log(error);
       console.error('Error fetching data:', error);
       alert(error)
-      // Handle the error in your UI, e.g., show an error message to the user
     }
   }
   
