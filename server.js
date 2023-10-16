@@ -1,5 +1,6 @@
 const express = require('express');
-const app = express();
+const bodyParser = require("body-parser")
+const app = express(bodyParser.json());
 const path = require('path');
 const logger = require('morgan');
 
