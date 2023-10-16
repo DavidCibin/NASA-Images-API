@@ -18,7 +18,6 @@ class NasaDaily extends Component {
     } catch (error) {
       console.error('Error fetching data:', error);
       alert(error)
-      // Handle the error in your UI, e.g., show an error message to the user
     }
   }
   
